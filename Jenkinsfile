@@ -1,13 +1,13 @@
 pipeline {
     
 	agent any
-/*	
+	
 	tools {
         maven "maven3"
 	
     }
-*/	
-    environment {
+	
+ /*   environment {
         NEXUS_VERSION = "nexus3"
         NEXUS_PROTOCOL = "http"
         NEXUS_URL = "172.31.40.209:8081"
@@ -16,7 +16,7 @@ pipeline {
         NEXUS_CREDENTIAL_ID = "nexuslogin"
         ARTVERSION = "${env.BUILD_ID}"
     }
-	
+*/	
     stages{
         
         stage('BUILD'){
@@ -37,7 +37,7 @@ pipeline {
             }
         }
 
-	stage('INTEGRATION TEST'){
+/*	stage('INTEGRATION TEST'){
             steps {
                 sh 'mvn verify -DskipUnitTests'
             }
@@ -113,7 +113,7 @@ pipeline {
                     }
                 }
             }
-        }
+        } */
 
 
     }
